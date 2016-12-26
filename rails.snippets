@@ -1,0 +1,42 @@
+snippet def "method definition"
+def $1
+	${0:${VISUAL:# method definition}}
+end
+endsnippet
+
+snippet cont "rspec: context block"
+context "$1" do
+	${0:${VISUAL:# assertions...}}
+end
+endsnippet
+
+snippet desc "rspec: describe block"
+describe "$1" do
+	${0:${VISUAL:# assertions...}}
+end
+endsnippet
+
+snippet i "rspec: it oneline notation"
+it { ${0:${VISUAL:# assertions...}} }
+endsnippet
+
+snippet it "rspec: it multyline notation"
+it "$1" do
+	 expect($2).to $0
+end
+endsnippet
+
+snippet be "rspec: before multyline notation"
+before do
+	 $0
+end
+endsnippet
+
+snippet b "rspec: before oneline notation"
+before { $0 }
+endsnippet
+
+snippet lec "rspec: let"
+let!(:$1) { create(:$0) }
+endsnippet
+
